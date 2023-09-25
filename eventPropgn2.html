@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+
+<body>
+
+    <div id="parent">
+        <button id="child">Child</button>
+    </div>
+
+    <script>
+        var div1 = document.querySelector('#parent');
+        div1.addEventListener('clicked', function (e) {
+            console.log("clicked on parent");
+        });
+
+        var child1 = document.querySelector('#child');
+        child1.addEventListener('clicked', function (e) {
+            console.log("clicked on child");
+            e.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add event propegation property</title>
+</head>
+<body>
+    <style>
+        #outer{
+            height: 250px;
+            width:250px;
+            background-color: blue;
+            margin: 50px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        #inner{
+            width:150px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+    <div id="outer">
+        <div id="inner">
+
+        </div>
+    </div>
+
+    <script>
+        var innerDiv=document.getElementById('inner');
+        innerDiv.addEventListener('click',function(){
+            console.log("Click on child div");
+            // event.stopPropagation();
+        });
+
+        var outerDiv=document.getElementById('outer');
+        outerDiv.addEventListener('click',function(){
+            console.log("Click on parent div");
+        });
+
+        document.addEventListener('click',function(){
+            console.log("Clicked on document");
+        });
+    </script>
+</body>
+</html>

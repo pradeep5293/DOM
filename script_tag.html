@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="intro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add sript property</title>
+    
+</head>
+<body>
+    <button id="btn">Say hello!</button>
+
+    <script type="text/javascript">
+        console.log("hello");
+        var helloBtn=document.getElementById('btn');
+
+        <!-- console.log(helloBtn); -->
+
+        helloBtn.addEventListener('click',function(){
+            alert("only hello");
+        }); 
+    </script>
+</body>
+</html>

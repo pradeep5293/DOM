@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    <style>
+        #container{
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color:blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            padding:50px;
+        }
+        #shape{
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        
+    </style>
+    <div id="container">
+        <div id="shape">Square</div>
+    
+        <!-- <div id="triangle">Square</div>s -->
+    </div>
+    <button id="changeColor">Change Color</button>
+    <button id="changeShape">Change Shape</button>
+    <script>
+        var colors=["blue","red","green"];
+        var shapes=["square","Circle","Triangle"];
+        var container1=document.getElementById("container");
+        var shapeText=document.getElementById("shape");
+        var colorBtn=document.getElementById("changeColor");
+        var shapeBtn=document.getElementById("changeShape");
+        function getRandomElement(arr){
+            var randomIndex=Math.floor(Math.random()*arr.length);
+            return arr[randomIndex]
+        }
+        colorBtn.addEventListener('click',()=>{
+            var randomColor=getRandomElement(colors);
+            container1.style.backgroundColor=randomColor;
+        });
+        shapes.addEventListener('click',()=>{
+            var randomShape=getRandomElement(shapes);
+            shapeText.textContent=randomShape;
+        });
+
+    </script>
+</body>
+</html>

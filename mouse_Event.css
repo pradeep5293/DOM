@@ -1,0 +1,14 @@
+#outer{
+    width: 200px;
+    height: 200px;
+    background-color:red;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 50px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#search{
+    border:1px solid black;
+}

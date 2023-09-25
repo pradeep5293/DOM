@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propegation</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">Child</button>
+    </div>
+
+    <script>
+        var parentDiv=document.querySelector('#parent');
+        parentDiv.addEventListener('click',function(){
+            console.log("clicked on parent");
+        });
+
+        var child1=document.querySelector('#child');
+        child1.addEventListener('click',function(){
+            console.log("clicked on child");
+        });
+    </script>
+</body>
+</html>
